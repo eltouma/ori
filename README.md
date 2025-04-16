@@ -7,7 +7,7 @@ Homebrew install<br>
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`<br><br>
 node install<br>
 `brew install node`<br>
-`node -v\nnpm -v\n`<br><br>
+`node -v && npm -v`<br><br>
 tailwindcss install<br>
 `npm install -D tailwindcss postcss autoprefixer`<br><br>
 To launch the project<br>
@@ -20,7 +20,7 @@ npm install<br>
 `source ~/.bashrc`  # or `~/.zshrc`<br><br>
 node install<br>
 `nvm install --lts`<br>
-`node -v\nnpm -v\n`<br><br>
+`node -v npm `-v\n`<br><br>
 tailwindcss install<br>
 `npm init -y`<br>
 `npm install -D tailwindcss postcss autoprefixer`<br><br>
