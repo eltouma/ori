@@ -20,7 +20,7 @@ npm install<br>
 `source ~/.bashrc`  # or `~/.zshrc`<br><br>
 node install<br>
 `nvm install --lts`<br>
-`node -v npm `-v\n`<br><br>
+`node -v && npm -v`<br><br>
 tailwindcss install<br>
 `npm init -y`<br>
 `npm install -D tailwindcss postcss autoprefixer`<br><br>
