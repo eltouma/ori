@@ -1,103 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Ori Pong</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcendance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+<body class="overflow-hidden">
 
-<body class="bg-black text-white overflow-hidden">
+  <!-- FONDU NOIR -->
+  <div id="blackOverlay" class="black-overlay"></div>
 
-<!-- FONDU NOIR -->
-<div id="blackOverlay" class="fixed top-0 left-0 w-full h-full bg-black opacity-0 pointer-events-none transition-opacity duration-1000 z-50"></div>
+  <!-- SECTION 1 -->
+  <section class="relative h-screen w-full overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="bg1-video">
+      <source src="./videos/ori-feuille-loop.mp4" type="video/mp4" />
+    </video>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+      <h1 class="text-6xl font-bold drop-shadow-xl">Pong Game</h1>
+      <button id="startBtn" class="mt-6 px-6 py-2 rounded-full text-xl btn-glow">
+        <span>Let's play</span>
+      </button>
+    </div>
+  </section>
 
-<!-- SECTION 1 -->
-<section class="relative h-screen w-full overflow-hidden">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute inset-0 w-full h-full object-cover z-0"
-    id="bg1-video"
-  >
-    <source src="./videos/ori-feuille-loop.mp4" type="video/mp4" />
-  </video>
-  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center">
-    <h1 class="text-6xl font-bold drop-shadow-xl">Pong Game</h1>
-<!--    <p class="text-2xl mt-4 drop-shadow">Cliquez pour plonger</p>-->
-<button id="startBtn" class="mt-6 px-6 py-2 rounded-full text-xl btn-glow">
-  <span>Let's play</span>
-</button>
+  <!-- SECTION 2 -->
+  <section id="section2" class="relative h-screen w-full overflow-hidden plunge">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="bg-video">
+      <source src="./videos/ori-loop.mp4" type="video/mp4" />
+      Ton navigateur ne supporte pas la lecture vidéo HTML5.
+    </video>
+    <div class="relative z-10 text-center pt-20 text-white">
+      <p class="text-xl">Avec cette vidéo en background du Pong</p>
+    </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- SECTION 2 -->
-<section id="section2" class="relative h-screen w-full overflow-hidden plunge">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    class="absolute inset-0 w-full h-full object-cover z-0"
-    id="bg-video"
-  >
-    <source src="./videos/ori-loop.mp4" type="video/mp4" />
-    Ton navigateur ne supporte pas la lecture vidéo HTML5.
-  </video>
-
-  <div class="relative z-10 text-center pt-20 text-white">
-    <!--<h2 class="text-4xl font-bold mb-4">Let's play</h2>-->
-    <p class="text-xl">Avec cette vidéo en background du Pong</p>
-  </div>
-</section>
-
-<script>
-  // Ralentir la vidéo 2
-  document.getElementById('bg-video').playbackRate = 0.5;
-
-  const startBtn = document.getElementById('startBtn');
-  const overlay = document.getElementById('blackOverlay');
-
-  startBtn.addEventListener('click', () => {
-    // Fondu noir ON
-    overlay.classList.remove('pointer-events-none');
-    overlay.classList.add('opacity-100');
-
-    // Attendre 1s avant scroll
-    setTimeout(() => {
-      document.getElementById('section2').classList.add('active');
-      document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
-    }, 1000);
-
-    // Retirer fondu noir
-    setTimeout(() => {
-      overlay.classList.remove('opacity-100');
-      overlay.classList.add('opacity-0');
-    }, 2000);
-
-    // Désactive pointer-events après transition
-    setTimeout(() => {
-      overlay.classList.add('pointer-events-none');
-    }, 3000);
-  });
-</script>
-
-<script>
-  const btn = document.getElementById('startBtn');
-
-  btn.addEventListener('mousemove', (e) => {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    btn.style.setProperty('--x', `${x}px`);
-    btn.style.setProperty('--y', `${y}px`);
-  });
-</script>
-
+  <script src="assets/script.js"></script>
 </body>
 </html>
 
