@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Transcendance</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body class="overflow-hidden">
+<!--<body class="overflow-hidden">-->
+<body>
 
   <!-- FONDU NOIR -->
   <div id="blackOverlay" class="black-overlay"></div>
 
   <!-- SECTION 1 -->
-  <section class="relative h-screen w-full overflow-hidden">
+  <section class="section1">
     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="bg1-video">
       <source src="./videos/ori-feuille-loop.mp4" type="video/mp4" />
     </video>
@@ -29,14 +30,14 @@
   <section id="section2" class="relative h-screen w-full overflow-hidden plunge">
     <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0" id="bg-video">
       <source src="./videos/ori-loop.mp4" type="video/mp4" />
-      Ton navigateur ne supporte pas la lecture vidéo HTML5.
+      Browser does not support HTML5 video playback
     </video>
     <div class="relative z-10 text-center pt-20 text-white">
       <p class="text-xl">Avec cette vidéo en background du Pong</p>
     </div>
   </section>
 
-  <script src="assets/script.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
 

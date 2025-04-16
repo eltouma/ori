@@ -1,0 +1,22 @@
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+  z-index: 50;
+}
+
+.plunge {
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+  transform: translateY(30%);
+}
+.plunge.active {
+  opacity: 1;
+  transform: translateY(0);
+}
