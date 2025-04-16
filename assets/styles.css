@@ -1,0 +1,38 @@
+.body {
+	scroll-behavior: smooth;
+	font-family: 'Arial', sans-serif;
+}
+
+.plunge {
+	transition: all 0.1s ease-in-out;
+	opacity: 0;
+	transform: translateY(30%);
+}
+
+.plunge.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.btn-glow {
+	position: relative;
+	overflow: hidden;
+	background-color: #010a45; /* bleu nuit de base */
+	transition: background-color 0.3s ease;
+}
+
+.btn-glow::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(100, 200, 255, 0.7), transparent 40%);
+	transition: background 0.2s ease;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.btn-glow span {
+	position: relative;
+	z-index: 2;
+	color: white;
+}
