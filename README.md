@@ -3,13 +3,13 @@ On MAC
 npm install<br>
 `npm install -D tailwindcss postcss autoprefixer`
 <br><br>
-brew install<br>
+Homebrew install<br>
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`<br><br>
 node install<br>
 `brew install node`<br>
 `node -v\nnpm -v\n`<br><br>
 tailwindcss install<br>
-` npm install -D tailwindcss postcss autoprefixer`<br><br>
+`npm install -D tailwindcss postcss autoprefixer`<br><br>
 To launch the project<br>
 `npx serve .` and <http://localhost:3000>
 
