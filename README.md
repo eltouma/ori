@@ -28,5 +28,6 @@ tailwindcss config<br>
 `npx tailwindcss init -p`<br>
 
 To launch the project<br>
+`cd <ori_repo>`<br>
 `npm install -g serve`<br>
 `serve -l 3000 .` and <http://localhost:3000>
